@@ -13,20 +13,18 @@ class Calculator:
                 print("Enter Numbers ONLY.")
 
     def get_operator(self):
-        i = 0
-        while i == 0:
+        
+        while True:
             operator = input("enter an operator(+,-,*,X,/):")
             if not (
                 operator == "+"
                 or operator == "-"
                 or operator == "*"
                 or operator == "X"
-                or operator == "/"
-            ):
-                i = 0
+                or operator == "/"):
+                pass
             else:
-                i = 1
-        return operator
+                return operator
 
     def get_result(self, num1, num2, operator):
         num1 = int(num1)
