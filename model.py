@@ -34,7 +34,7 @@ class Calculator:
 
         while True:
             concat_string = ", ".join(self.accepted_operators)
-            operator = input(f"enter an operator({concat_string}):")
+            operator = input(f"enter an operator({concat_string}): ")
             if operator in self.accepted_operators:
                 self.operator = operator
                 break
@@ -57,6 +57,6 @@ class Calculator:
 
             result = operator_map[self.operator]
 
-            print(result)
+            #print(result)
 
         return result
