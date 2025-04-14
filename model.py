@@ -19,7 +19,7 @@ class Calculator:
     def get_all_number(self):
         self.number_required = int(self._get_number("How many numbers do you need to calculate?"))
         for i in range(self.number_required):
-            self.all_numbers.append(self._get_number(f"Enter the {i} number"))
+            self.all_numbers.append(self._get_number(f"Enter the {i+1} number: "))
 
         # self.first_number = self._get_number("Ënter the first number.")
         # self.second_number = self._get_number("Ënter the second number.")
