@@ -5,12 +5,11 @@ def main():
 
     calculator = Calculator()
     calculator.get_number()
-    calculator.get_number()
     calculator.get_operator()
 
     print(
         f"""------------------------------------------------
-{calculator.number1} {calculator.operator} {calculator.number2} = {calculator.get_result(calculator.number1,calculator.number2,calculator.operator)} """
+        {calculator.first_number} {calculator.operator} {calculator.second_number} = {calculator.get_result()} """
     )
 
 

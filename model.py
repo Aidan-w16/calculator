@@ -1,46 +1,48 @@
-class Calculator:
-    def __init__(self):
-        self.number_to_collect = 0
 
-    def get_number(self):
-        self.number_to_collect += 1
+class Calculator:
+
+    def __init__(self):
+        self.first_number = 0
+        self.second_number = 0
+        self.operator = None
+
+    def _get_number(self, display_text):
         while True:
-            number = input(f"Enter number {self.number_to_collect}: ")
+            number = input(display_text)
             try:
                 number = float(number)
-                if self.number_to_collect == 1:
-                    self.number1 = number
-                elif self.number_to_collect == 2:
-                    self.number2 = number
-                break
+                return number
             except ValueError:
                 print("Enter Numbers ONLY.")
 
+    def get_number(self):
+        self.first_number = self._get_number("Ënter the first number.")
+        self.second_number = self._get_number("Ënter the second number.")
+
     def get_operator(self):
 
+        accepted_list = ["+", "-", "*", "X", "/"]
+
         while True:
-            operator = input("enter an operator(+,-,*,X,/):")
-            if not (
-                operator == "+"
-                or operator == "-"
-                or operator == "*"
-                or operator == "X"
-                or operator == "/"
-            ):
-                pass
-            else:
+            concat_string = ', '.join(accepted_list)
+            operator = input(f"enter an operator({concat_string}):")
+            if operator in accepted_list:
                 self.operator = operator
                 break
+            else:
+                print(f"Please enter one of the following '{concat_string}'.")
 
-    def get_result(self, number1, number2, operator):
-        number1 = int(number1)
-        number2 = int(number2)
-        if operator == "+":
-            result = number1 + number2
-        if operator == "-":
-            result = number1 - number2
-        if operator == "*" or operator == "X":
-            result = number1 * number2
-        if operator == "/":
-            result = number1 / number2
+    def get_result(self):
+        number1 = int(self.first_number)
+        number2 = int(self.second_number)
+
+        operator_map = {
+            '+': number1 + number2,
+            '-': number1 - number2,
+            "*": number1 * number2,
+            "X": number1 * number2,
+            "/": number1 / number2
+        }
+
+        result = operator_map[self.operator]
         return result
