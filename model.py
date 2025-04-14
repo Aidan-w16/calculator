@@ -8,7 +8,11 @@ class Calculator:
             number = input(f"Enter number {self.number_to_collect}: ")
             try:
                 number = float(number)
-                return number
+                if self.number_to_collect == 1:
+                    self.number1 = number
+                elif self.number_to_collect == 2:
+                    self.number2 = number
+                break
             except ValueError:
                 print("Enter Numbers ONLY.")
 
@@ -24,7 +28,8 @@ class Calculator:
                 or operator == "/"):
                 pass
             else:
-                return operator
+                self.operator = operator
+                break
 
     def get_result(self, num1, num2, operator):
         num1 = int(num1)
