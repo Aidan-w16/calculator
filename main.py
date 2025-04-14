@@ -18,7 +18,7 @@ def main():
     all_numbers = all_numbers[3:]
     print(
         f"""------------------------------------------------
-    {all_numbers} = {calculator.get_result()} """
+{all_numbers} = {calculator.get_result()} """
     )
 
 
