@@ -1,3 +1,8 @@
+from number_to_word import number_to_word
+
+num_to_word = number_to_word()
+
+
 class Calculator:
 
     def __init__(self):
@@ -20,10 +25,10 @@ class Calculator:
             self._get_number("How many numbers do you need to calculate?")
         )
         for i in range(self.number_required):
-            self.all_numbers.append(self._get_number(f"Enter the {i+1} number: "))
-
-        # self.first_number = self._get_number("Ënter the first number.")
-        # self.second_number = self._get_number("Ënter the second number.")
+            number_word = num_to_word.number_to_word[i + 1]
+            self.all_numbers.append(
+                self._get_number(f"Enter the {number_word} number: ")
+            )
 
     def get_operator(self):
 
