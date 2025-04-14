@@ -7,11 +7,11 @@ class Train:
         self.current_position = self.current_position + additional_distance
 
     def get_position(self):
-        pass
+        return self.current_position
 
 
 # Write a piece of coding where it starts at 10m, and it moves by 5m, and get the position after.
 
 train = Train(10)
 train.move(5)
-print(train.current_position)
+print(train.get_position())
