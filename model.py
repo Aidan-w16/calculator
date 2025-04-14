@@ -1,24 +1,16 @@
 class Calculator:
+    def __init__(self):
+        self.number_to_collect = 0
 
-    def get_first_number(self):
+    def get_number(self):
+        self.number_to_collect += 1
         while True:
-            first_number = input("Enter the first number. ")
+            number = input(f"Enter number {self.number_to_collect}. ")
             try:
-                first_number = int(first_number)
-                return first_number
+                number = float(number)
+                return number
             except ValueError:
                 print("Enter Numbers ONLY.")
-
-
-    def get_second_number(self):
-        while True:
-            second_number = input("Enter the second number")
-            try:
-                second_number = int(second_number)
-                return second_number
-            except ValueError:
-                print("Enter Numbers ONLY")
-
 
     def get_operator(self):
         i = 0

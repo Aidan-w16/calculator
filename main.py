@@ -3,8 +3,8 @@ from model import Calculator
 def main():
 
     calculator = Calculator()
-    number1 = calculator.get_first_number()
-    number2 = calculator.get_second_number()
+    number1 = calculator.get_number()
+    number2 = calculator.get_number()
     operator = calculator.get_operator()
 
     print(
