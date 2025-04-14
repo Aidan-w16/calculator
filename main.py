@@ -4,7 +4,7 @@ from model import Calculator
 def main():
 
     calculator = Calculator()
-    calculator.get_number()
+    calculator.get_all_number()
     calculator.get_operator()
 
     print(
