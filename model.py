@@ -5,7 +5,7 @@ class Calculator:
     def get_number(self):
         self.number_to_collect += 1
         while True:
-            number = input(f"Enter number {self.number_to_collect}. ")
+            number = input(f"Enter number {self.number_to_collect}: ")
             try:
                 number = float(number)
                 return number
