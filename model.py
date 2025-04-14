@@ -1,30 +1,24 @@
 class Calculator:
 
     def get_first_number(self):
-        i = 0
-        while i == 0:
-            first_num = input("Enter the first number")
+        while True:
+            first_number = input("Enter the first number. ")
             try:
-                first_num = int(first_num)
-                i = 2
+                first_number = int(first_number)
+                return first_number
             except ValueError:
-                print("Enter Numbers ONLY")
+                print("Enter Numbers ONLY.")
 
-                i = 0
-        return first_num
 
     def get_second_number(self):
-        i = 0
-        while i == 0:
-            second_num = input("Enter the second number")
+        while True:
+            second_number = input("Enter the second number")
             try:
-                second_num = int(second_num)
-                i = 2
+                second_number = int(second_number)
+                return second_number
             except ValueError:
                 print("Enter Numbers ONLY")
 
-                i = 0
-        return second_num
 
     def get_operator(self):
         i = 0
