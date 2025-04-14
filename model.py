@@ -45,16 +45,27 @@ class Calculator:
         result = self.all_numbers[0]
         numberindex = 0
 
+        # for item in self.all_numbers:
         for numberindex in range(1, self.number_required):
-
-            operator_map = {
-                "+": result + self.all_numbers[numberindex],
-                "-": result - self.all_numbers[numberindex],
-                "*": result * self.all_numbers[numberindex],
-                "X": result * self.all_numbers[numberindex],
-                "/": result / self.all_numbers[numberindex],
-            }
-
-            result = operator_map[self.operator]
+            item = self.all_numbers[numberindex]
+            match self.operator:
+                case "+":
+                    result += item
+                case "-":
+                    result -= item
+                case "*":
+                    result *= item
+                case "X":
+                    result *= item
+                case "/":
+                    result /= item
+                case _:
+                    raise ValueError("Invalid operator")
 
         return result
+    def display_formula(self):
+        all_numbers = str(self.operator).join([str(x) for x in self.all_numbers])
+        print(
+        f"""------------------------------------------------
+{all_numbers} = {self.get_result()} """
+    )
