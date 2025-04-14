@@ -6,10 +6,11 @@ def main():
     calculator = Calculator()
     calculator.get_all_number()
     calculator.get_operator()
-
+    print(calculator.all_numbers)
+    print(calculator.operator)
     print(
         f"""------------------------------------------------
-        {calculator.first_number} {calculator.operator} {calculator.second_number} = {calculator.get_result()} """
+        {calculator.get_result()} """
     )
 
 
