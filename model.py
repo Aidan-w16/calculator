@@ -17,7 +17,7 @@ class Calculator:
                 print("Enter Numbers ONLY.")
 
     def get_operator(self):
-        
+
         while True:
             operator = input("enter an operator(+,-,*,X,/):")
             if not (
@@ -25,21 +25,22 @@ class Calculator:
                 or operator == "-"
                 or operator == "*"
                 or operator == "X"
-                or operator == "/"):
+                or operator == "/"
+            ):
                 pass
             else:
                 self.operator = operator
                 break
 
-    def get_result(self, num1, num2, operator):
-        num1 = int(num1)
-        num2 = int(num2)
+    def get_result(self, number1, number2, operator):
+        number1 = int(number1)
+        number2 = int(number2)
         if operator == "+":
-            result = num1 + num2
+            result = number1 + number2
         if operator == "-":
-            result = num1 - num2
+            result = number1 - number2
         if operator == "*" or operator == "X":
-            result = num1 * num2
+            result = number1 * number2
         if operator == "/":
-            result = num1 / num2
+            result = number1 / number2
         return result
